@@ -26,7 +26,7 @@
         async function init() {
             try {
                 // 2. 加载本地 models 文件夹中的模型
-                await faceapi.nets.tinyFaceDetector.loadFromUri('./models');
+                await faceapi.nets.tinyFaceDetector.loadFromUri('models');
                 status.innerText = "模型就绪，请开启摄像头权限";
 
                 const stream = await navigator.mediaDevices.getUserMedia({ video: {} });
@@ -55,4 +55,5 @@
         init();
     </script>
 </body>
+
 </html>
